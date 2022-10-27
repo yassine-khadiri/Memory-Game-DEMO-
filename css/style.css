@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;900&display=swap');
+
+:root {
+    --color-light: #FFF;
+    --color-dark: #000;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,46 +12,64 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #0d3b66;
+    background-color: var(--color-light);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.dark-mode {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.light-mode {
+    border: 2px solid var(--color-light);
 }
 
 table {
     position: absolute;
-    /* padding: 4px 1px 0 2px; */
     width: 50%;
     height: 70%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #faf0ca;
 }
 
 table tr td {
-    border: 2px solid black;
+    border: 2px solid var(--color-dark);
     cursor: pointer;
 }
 
 table img {
     height: 100%;
     width: 100%;
-    display: table-cell;
+    display: table;
     visibility: hidden;
 }
 
-/* i {
-    display: inline-table;
-    position: absolute;
-    font-size: 500%;
-    color: chartreuse;
-    width: fit-content;
-    text-align: center;
-    z-index: -1;
-} */
-
 caption {
-    color: #f4d35e;
     font-size: 3em;
-    margin: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
     letter-spacing: 3px;
+}
+
+/* Style For Bootstrap Icons */
+
+.toggle-button {
+    position: absolute;
+    font-size: 1.8em;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+}
+
+/* ================================================ */
+
+#footer {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: bold;
+    font-size: 1.2em;
 }

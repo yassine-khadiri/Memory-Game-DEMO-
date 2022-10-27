@@ -3,6 +3,8 @@ let fillArr = (arr) => {
         arr[i] = i + 1;
 }
 
+// Put The Images Inside Table
+
 let putImages = () => {
     let table = document.querySelector("table");
     let tr, randomVal, counterTd = 0;
@@ -16,7 +18,7 @@ let putImages = () => {
             randomVal = Math.floor(Math.random() * 10);
         }while (arr[randomVal + 1] == -1);
         arr[randomVal + 1] = -1;
-        tr.innerHTML += `<td><img src="../assets/images/${randomVal + 1}.jpg" alt="${randomVal + 1}.jpg" /></td>`;
+        tr.innerHTML += `<td><img src="assets/images/${randomVal + 1}.jpg" alt="${randomVal + 1}.jpg" /></td>`;
         counterTd++;
         if (counterTd == 5)
         {
@@ -35,6 +37,8 @@ let putImages = () => {
     }
 }
 
+// =========================================================================
+
 for (let i = 0; i < 2; i++)
     putImages();
 
@@ -44,35 +48,52 @@ let checkEquality = (arrRes) => {
         swal.fire({
             title: "Good Job :)",
             icon: "success",
-            imageUrl: '../assets/images/win.jpg',
+            imageUrl: 'assets/images/win.jpg',
             imageWidth: "90%",
-            background: "#1282a2",
+            background: "#FFF",
+            color: "#000",
             // timer: "1500",
-            className: "swal"
         })
+        winSound.play();
     }
     else
     {
         swal.fire({
             title: "Try Again :(",
             icon: "error",
-            imageUrl: '../assets/images/lose.jpg',
+            imageUrl: 'assets/images/lose.jpg',
             imageWidth: "90%",
-            background: "#1282a2",
-            color: "white",
+            background: "#FFF",
+            color: "#000",
             // timer: "1500",
-            className: "swal"
         })
+        loseSound.play();
         arrRes[0].style.visibility = 'hidden';
         arrRes[1].style.visibility = 'hidden';
     }
 }
 
-let collection = document.getElementsByTagName('td');
-let flag = false, arrRes = [], winSound, loseSound, j = 0;
+// For Dark Mode
 
-winSound = new Audio;
-winSound = '../assets/sounds/winSound.mp3';
+let body = document.body;
+let toggle = document.querySelector('.toggle-button');
+let collectionTd = document.querySelectorAll('td');
+let _swal = document.querySelector('.swal');
+
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('bi-sun-fill');
+    body.classList.toggle('dark-mode');
+    for (let i = 0; i < collectionTd.length; i++)
+        collectionTd[i].classList.toggle('light-mode');
+});
+
+// =========================================================================
+
+let collection = document.getElementsByTagName('td');
+let flag = false, arrRes = [] , j = 0,
+winSound = new Audio('assets/sounds/winSound.mp3'),
+loseSound = new Audio('assets/sounds/loseSound.mp3');
+
 for (let i = 0; collection.length; i++)
 {
     collection[i].addEventListener("click",() => {
@@ -80,12 +101,10 @@ for (let i = 0; collection.length; i++)
         arrRes[j] = collection[i].firstChild;
         if (arrRes.length == 2)
         {
-            setTimeout(checkEquality, 500, arrRes);
+            setTimeout(checkEquality, 300, arrRes);
             j = -1;
             arrRes = [];
         }
         j++;
-        console.log(j);
     })
 }
-
