@@ -18,9 +18,7 @@
 
 # Everything Used In This Game
 
-HTML
-CSS
-JavaScript
+HTML, CSS, JavaScript
 
 ----Bootstrap Icons Library: 
 https://icons.getbootstrap.com/
