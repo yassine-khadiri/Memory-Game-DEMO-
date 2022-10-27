@@ -8,7 +8,7 @@
 
 ![p3](https://user-images.githubusercontent.com/77007791/198350361-316a26b9-2369-4f35-9ba3-ff76f0fd2b93.png)
 
-# Lose Message 🙂
+# Loss Message 🙂
 
 ![p4](https://user-images.githubusercontent.com/77007791/198350379-c3a71751-9091-49f3-af06-950b6a372e4a.png)
 
