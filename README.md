@@ -18,11 +18,11 @@
 
 # Everthing Used In This Game
 
-----Bootstrap Icons Library 
+----Bootstrap Icons Library:  
 https://icons.getbootstrap.com/
 
-----Sweetalert2 Library 
+----Sweetalert2 Library:  
 https://sweetalert2.github.io/
 
-----For tajawal Font 
+----For tajawal Font: 
 https://fonts.google.com/specimen/Tajawal?query=tajawal
