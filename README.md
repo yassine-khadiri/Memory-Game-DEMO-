@@ -4,11 +4,11 @@
 
 ![p2](https://user-images.githubusercontent.com/77007791/198350340-0c9212ff-61bf-4627-a0fc-185519c8b537.png)
 
-# Win Message 😂
+# Win Message 😂 + Sound Effect
 
 ![p3](https://user-images.githubusercontent.com/77007791/198350361-316a26b9-2369-4f35-9ba3-ff76f0fd2b93.png)
 
-# Loss Message 🙂
+# Loss Message 🙂 + Sound Effect
 
 ![p4](https://user-images.githubusercontent.com/77007791/198350379-c3a71751-9091-49f3-af06-950b6a372e4a.png)
 
