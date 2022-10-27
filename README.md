@@ -12,7 +12,7 @@
 
 ![p4](https://user-images.githubusercontent.com/77007791/198350379-c3a71751-9091-49f3-af06-950b6a372e4a.png)
 
-# Support Dark Mode (Not 100%)
+# Support Dark Mode (Not 100% 🙂)
 
 ![p5](https://user-images.githubusercontent.com/77007791/198350573-94603521-611b-453f-953b-5ebff10bcd8a.png)
 
