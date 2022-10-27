@@ -16,7 +16,11 @@
 
 ![p5](https://user-images.githubusercontent.com/77007791/198350573-94603521-611b-453f-953b-5ebff10bcd8a.png)
 
-# Everthing Used In This Game
+# Everything Used In This Game
+
+HTML
+CSS
+JavaScript
 
 ----Bootstrap Icons Library: 
 https://icons.getbootstrap.com/
