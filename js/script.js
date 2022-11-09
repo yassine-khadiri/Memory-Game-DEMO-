@@ -90,20 +90,29 @@ toggle.addEventListener('click', () => {
 // =========================================================================
 
 let collection = document.getElementsByTagName('td');
-let flag = false, arrRes = [] , j = 0,
+let flag = false, arrRes = [], j = 0,
 winSound = new Audio('assets/sounds/winSound.mp3'),
 loseSound = new Audio('assets/sounds/loseSound.mp3');
 
 for (let i = 0; collection.length; i++)
 {
     collection[i].addEventListener("click",() => {
+		// console.log(collection[i].parentNode.rowIndex);
+		// console.log(`(${collection[i].parentNode.rowIndex}, ${collection[i].cellIndex})`);
         collection[i].firstChild.style.visibility = 'visible';
         arrRes[j] = collection[i].firstChild;
         if (arrRes.length == 2)
         {
-            setTimeout(checkEquality, 300, arrRes);
-            j = -1;
-            arrRes = [];
+			// This Code To Fix The Success Result When U Click Multiple Times At The Same Image!
+			console.log(arrRes[0].parentNode.cellIndex);
+			console.log(arrRes[0].parentNode.parentNode.rowIndex);
+			if (arrRes[0].parentNode.parentNode.rowIndex == arrRes[1].parentNode.parentNode.rowIndex
+				&& arrRes[0].parentNode.cellIndex == arrRes[1].parentNode.cellIndex)
+				return ;
+			// ---------------------------------------------------------
+			setTimeout(checkEquality, 300, arrRes);
+			j = -1;
+			arrRes = [];
         }
         j++;
     })
