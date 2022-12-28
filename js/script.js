@@ -37,6 +37,31 @@ let putImages = () => {
     }
 }
 
+
+let progress = document.querySelector('#prog');
+let i = 0;
+const timer = ()=>
+{
+	if (i <= 100)
+	{
+		console.log(i);
+		progress.setAttribute('value', i);
+		setTimeout(timer, 100);
+		i++;
+	}
+}
+
+timer();
+// Make A Counter Before Hdding The Cards:
+// let timer = document.querySelector('timer')
+// const timer = () =>{
+// 	document.write('timer: ');
+// 	for (let i = 1; i < 11; i++)
+// 		document.write(i);
+// }
+
+// timer();
+
 // =========================================================================
 
 for (let i = 0; i < 2; i++)
