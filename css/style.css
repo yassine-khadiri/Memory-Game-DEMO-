@@ -29,6 +29,12 @@ body {
     border: 2px solid var(--color-light);
 }
 
+.timer {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
 table {
     position: absolute;
     width: 50%;
@@ -36,6 +42,7 @@ table {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
 }
 
 table tr td {
